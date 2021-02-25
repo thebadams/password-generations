@@ -7,7 +7,7 @@ var characterTypes = {
   upperCase: ["A", "B", "C", "D", "E", "F"],
   lowerCase: ["a", "b", "c", "d", "e", "f"],
   numeric: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
-  specialCharacters: ["@", "%", "$", "&", "!"]//insert array of special characters here.
+  special: ["@", "%", "$", "&", "!"]//insert array of special characters here.
 
 };
 
@@ -17,7 +17,7 @@ var passwordInfo = {
   includesLowerCase: false,
   includesNumeric: false,
   includesSpecial: false,
-  possibleCharacters: [characterTypes.upperCase, characterTypes.lowerCase]
+  possibleCharacters: []
 
 };
 
@@ -69,6 +69,21 @@ function userPrompt() {
   getCharacterTypes();
 };
 
+//define a function to place the necessary character arrays in the possibleCharacters array
+function addPossibleChars() {
+  if(passwordInfo.includesUpperCase) {
+    passwordInfo.possibleCharacters.push(characterTypes.upperCase);
+  };
+  if (passwordInfo.includesLowerCase) {
+    passwordInfo.possibleCharacters.push(characterTypes.lowerCase);
+  };
+  if (passwordInfo.includesNumeric) {
+    passwordInfo.possibleCharacters.push(characterTypes.numeric);
+  }
+  if (passwordInfo.includesSpecial) {
+    passwordInfo.possibleCharacters.push(characterTypes.special);
+  }
+}
 
 
 //define a function to choose the random characters
