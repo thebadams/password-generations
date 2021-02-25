@@ -48,6 +48,12 @@ function getLength () {
   }
 }
 
+//define a function to decide which charactersets to use
+function getCharacterTypes () {
+  var hasUpper = confirm("Would You like the password to contain uppercase letters?");
+  passwordInfo.includesUpperCase = hasUpper;
+}
+
 
 //define a function that occurs to collect parameters
 function userPrompt() {
