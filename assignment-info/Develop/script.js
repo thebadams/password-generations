@@ -7,7 +7,7 @@ var characterTypes = {
   upperCase: ["A,", "B", "C", "D", "E", "F"],
   lowerCase: ["a", "b", "c", "d", "e", "f"],
   numeric: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
-  specialCharacters: //insert array of special characters here.
+  specialCharacters: ["@", "%", "$", "&", "!"]//insert array of special characters here.
 
 };
 
