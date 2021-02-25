@@ -36,3 +36,26 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword());
+
+//define a function to get and validate length
+function getLength () {
+  var passwordLength = prompt("How Many Characters Should the Password Contain? (Must Be a Number between 8 and 120");
+  if (passwordLength < 8 || passwordLength > 120) {
+    alert("Please Choose a Number between 8 and 120");
+    getLength();
+  } else {
+    passwordInfo.passwordLength = passwordLength;
+  }
+}
+
+
+//define a function that occurs to collect parameters
+function userPrompt() {
+ 
+  
+
+
+} 
+
+
+
