@@ -4,7 +4,7 @@
 var generateBtn = document.querySelector("#generate");
 
 var characterTypes = {
-  upperCase: ["A,", "B", "C", "D", "E", "F"],
+  upperCase: ["A", "B", "C", "D", "E", "F"],
   lowerCase: ["a", "b", "c", "d", "e", "f"],
   numeric: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
   specialCharacters: ["@", "%", "$", "&", "!"]//insert array of special characters here.
@@ -17,7 +17,7 @@ var passwordInfo = {
   includesLowerCase: false,
   includesNumeric: false,
   includesSpecial: false,
-  passwordCharacters: []
+  possibleCharacters: [characterTypes.upperCase, characterTypes.lowerCase]
 
 };
 
@@ -71,4 +71,11 @@ function userPrompt() {
 
 
 
-//define a function to choose the 
+//define a function to choose the random characters
+function getRandomChar(){
+var charType = Math.floor(Math.random()*passwordInfo.possibleCharacters.length); //generates a number based on the length of the array passwordInfo.possibleCharacters
+var characterNum = Math.floor(Math.random()*passwordInfo.possibleCharacters[charType].length); //generates a random number to determine which character to use in the password
+var character = passwordInfo.possibleCharacters[charType][characterNum];
+return character;
+
+}
