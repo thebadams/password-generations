@@ -39,25 +39,25 @@ generateBtn.addEventListener("click", writePassword());
 
 //define a function to get and validate length
 function getLength () {
-  var passwordLength = prompt("How Many Characters Should the Password Contain? (Must Be a Number between 8 and 120");
+  var passwordLength = prompt("How Many Characters Should the Password Contain? (Must Be a Number between 8 and 120"); //prompts the user for lenght
   if (passwordLength < 8 || passwordLength > 120) {
-    alert("Please Choose a Number between 8 and 120");
-    getLength();
-  } else {
-    passwordInfo.passwordLength = passwordLength;
+    alert("Please Choose a Number between 8 and 120"); //if the user inputs a number less than 8, or greater than 120, notify them that they must choose a number between 8 and 120
+    getLength(); // run the getLength function again
+  } else { //if conditions are met
+    passwordInfo.passwordLength = passwordLength; //set input to passwordInfo.passwordLength
   }
 }
 
 //define a function to decide which charactersets to use
 function getCharacterTypes () {
-  var hasUpper = confirm("Would You like the password to contain uppercase letters?");
-  passwordInfo.includesUpperCase = hasUpper;
-  var hasLower = confirm("Would you like the password to contain lowercase letters?");
-  passwordInfo.includesLowerCase = hasLower;
-  var hasNumbers = confirm("Would you like the password to contain numbers?");
-  passwordInfo.includesNumeric = hasNumbers;
-  var hasSpecial = confirm("Would you like the password to contain special characters?");
-  passwordInfo.includesSpecial = hasSpecial;
+  var hasUpper = confirm("Would You like the password to contain uppercase letters?"); //confirm whether the password should have uppercase letters
+  passwordInfo.includesUpperCase = hasUpper; //set boolean value based on input
+  var hasLower = confirm("Would you like the password to contain lowercase letters?"); //confirm whether the password should lave lowercase letters
+  passwordInfo.includesLowerCase = hasLower; //set boolean value based on input
+  var hasNumbers = confirm("Would you like the password to contain numbers?"); //confirm whether hte password should ahve numbers
+  passwordInfo.includesNumeric = hasNumbers; //set boolean value baed upon input
+  var hasSpecial = confirm("Would you like the password to contain special characters?"); // confirm whether hte password should have special characters
+  passwordInfo.includesSpecial = hasSpecial; // set boolean value based upon input
 
 
 }
@@ -71,3 +71,4 @@ function userPrompt() {
 
 
 
+//define a function to choose the 
