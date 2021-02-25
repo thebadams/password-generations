@@ -15,8 +15,8 @@ var passwordInfo = {
   passwordLength: 0,
   includesUpperCase: false,
   includesLowerCase: false,
-  includesNumberic: false,
-  includesSpecialCharacters: false,
+  includesNumeric: false,
+  includesSpecial: false,
   passwordCharacters: []
 
 };
@@ -52,16 +52,22 @@ function getLength () {
 function getCharacterTypes () {
   var hasUpper = confirm("Would You like the password to contain uppercase letters?");
   passwordInfo.includesUpperCase = hasUpper;
+  var hasLower = confirm("Would you like the password to contain lowercase letters?");
+  passwordInfo.includesLowerCase = hasLower;
+  var hasNumbers = confirm("Would you like the password to contain numbers?");
+  passwordInfo.includesNumeric = hasNumbers;
+  var hasSpecial = confirm("Would you like the password to contain special characters?");
+  passwordInfo.includesSpecial = hasSpecial;
+
+
 }
 
 
 //define a function that occurs to collect parameters
 function userPrompt() {
- 
-  
-
-
-} 
+  getLength();
+  getCharacterTypes();
+};
 
 
 
