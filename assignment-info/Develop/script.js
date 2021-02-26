@@ -17,7 +17,8 @@ var passwordInfo = {
   includesLowerCase: false,
   includesNumeric: false,
   includesSpecial: false,
-  possibleCharacters: []
+  possibleCharacters: [],
+  passwordValues: []
 
 };
 
@@ -93,4 +94,12 @@ var characterNum = Math.floor(Math.random()*passwordInfo.possibleCharacters[char
 var character = passwordInfo.possibleCharacters[charType][characterNum];
 return character;
 
+}
+
+//write a function to construct the password
+function constructPassword() {
+  for(var i = 1; i <= passwordInfo.passwordLength; i++){
+   var character = getRandomChar();
+    passwordInfo.passwordValues.push(character);
+  }
 }
