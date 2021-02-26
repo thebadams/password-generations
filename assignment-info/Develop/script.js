@@ -25,6 +25,10 @@ var passwordInfo = {
 
 function generatePassword(){
   // code to generate password
+  userPrompt();
+  addPossibleChars();
+  constructPassword();
+  return passwordInfo.passwordValue
 }
 
 // Write password to the #password input
@@ -37,7 +41,7 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword());
+generateBtn.addEventListener("click", writePassword);
 
 //define a function to get and validate length
 function getLength () {
