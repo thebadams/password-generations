@@ -18,7 +18,8 @@ var passwordInfo = {
   includesNumeric: false,
   includesSpecial: false,
   possibleCharacters: [],
-  passwordValues: []
+  passwordCharacters: [],
+  passwordValue: ""
 
 };
 
@@ -100,6 +101,7 @@ return character;
 function constructPassword() {
   for(var i = 1; i <= passwordInfo.passwordLength; i++){
    var character = getRandomChar();
-    passwordInfo.passwordValues.push(character);
+    passwordInfo.passwordCharacters.push(character);
   }
+  passwordInfo.passwordValue = passwordInfo.passwordCharacters.join("");
 }
