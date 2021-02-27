@@ -112,7 +112,7 @@ function testCharTypes(){
   regexUpper = /[A-Z]/
   regexLower = /[a-z]/
   regexNumber = /[0-9]/
-  regexSpecial = /[@%$&!]/
+  regexSpecial = /[ !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/
   if(passwordInfo.includesUpperCase){
     if(!(regexUpper.test(passwordInfo.passwordValue))){
       constructPassword()
