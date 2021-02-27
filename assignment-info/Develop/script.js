@@ -65,6 +65,10 @@ function getCharacterTypes () {
   passwordInfo.includesNumeric = hasNumbers; //set boolean value baed upon input
   var hasSpecial = confirm("Would you like the password to contain special characters?"); // confirm whether hte password should have special characters
   passwordInfo.includesSpecial = hasSpecial; // set boolean value based upon input
+  if(!(hasUpper || hasLower || hasNumbers || hasSpecial)) {
+    alert("Please Choose At Least One Character Set");
+    getCharacterTypes();
+  }
 
 
 }
