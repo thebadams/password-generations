@@ -22,5 +22,6 @@ This is a web application that generates a password based upon user specificatio
 The web application is expected to behave in the following ways
 
 1. If the User inputs a number that is less than 8, the User is notified that they must input a number between 8 and 128 and are greeted with the prompt again.
-1. If the User input a number that is greater than 128, the User is notfified tha they must input a number between 8 and 128 and are greeted with the prompt again.
-1. If the User inputs 
+1. If the User input a number that is greater than 128, the User is notfified that they must input a number between 8 and 128 and are greeted with the prompt again.
+1. If the User inputs something that is not a number, the user is notified that they must input a number between 8 and 128 and are greeted with the prompt again.
+1. If the user fails to choose one of the four character sets, the application will alert them that they must choose at least one character set, and send them through the confirms again.
