@@ -45,9 +45,9 @@ generateBtn.addEventListener("click", writePassword);
 
 //define a function to get and validate length
 function getLength () {
-  var passwordLength = prompt("How Many Characters Should the Password Contain? (Must Be a Number between 8 and 120"); //prompts the user for lenght
-  if (passwordLength < 8 || passwordLength > 120) {
-    alert("Please Choose a Number between 8 and 120"); //if the user inputs a number less than 8, or greater than 120, notify them that they must choose a number between 8 and 120
+  var passwordLength = prompt("How Many Characters Should the Password Contain? (Must Be a Number between 8 and 128"); //prompts the user for lenght
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Please Choose a Number between 8 and 128"); //if the user inputs a number less than 8, or greater than 128, notify them that they must choose a number between 8 and 120
     getLength(); // run the getLength function again
   } else { //if conditions are met
     passwordInfo.passwordLength = passwordLength; //set input to passwordInfo.passwordLength
