@@ -26,7 +26,6 @@ var passwordInfo = {
 function generatePassword(){
   // code to generate password
   userPrompt();
-  addPossibleChars();
   constructPassword();
   return passwordInfo.passwordValue
 }
@@ -73,16 +72,9 @@ function getCharacterTypes () {
 
 }
 
-
-//define a function that occurs to collect parameters
-function userPrompt() {
-  getLength();
-  getCharacterTypes();
-};
-
 //define a function to place the necessary character arrays in the possibleCharacters array
 function addPossibleChars() {
-  if(passwordInfo.includesUpperCase) {
+  if (passwordInfo.includesUpperCase) {
     passwordInfo.possibleCharacters.push(characterTypes.upperCase);
   };
   if (passwordInfo.includesLowerCase) {
@@ -95,6 +87,15 @@ function addPossibleChars() {
     passwordInfo.possibleCharacters.push(characterTypes.special);
   }
 }
+
+//define a function that occurs to collect parameters
+function userPrompt() {
+  getLength();
+  getCharacterTypes();
+  addPossibleChars();
+};
+
+
 
 
 //define a function to choose the random characters
