@@ -25,3 +25,32 @@ The web application is expected to behave in the following ways
 1. If the User input a number that is greater than 128, the User is notfified that they must input a number between 8 and 128 and are greeted with the prompt again.
 1. If the User inputs something that is not a number, the user is notified that they must input a number between 8 and 128 and are greeted with the prompt again.
 1. If the user fails to choose one of the four character sets, the application will alert them that they must choose at least one character set, and send them through the confirms again.
+
+## Screenshots
+
+### Start
+![screenshot start](assets/images/password-generator-start.png)
+
+### Password Length Query
+![screenshot password length](assets/images/password-generator-length.png)
+
+### Password Uppercase Query
+![screenshot uppercase](assets/images/password-generator-uppercase.png)
+
+### Password Lowercase Query
+![screenshot lowercase](assets/images/password-generator-lowercase.png)
+
+### Password Numbers Query
+![screenshot numbers](assets/images/password-generator-numbers.png)
+
+### Password Special Query
+![screenshot special](assets/images/password-generator-special.png)
+
+### Password End Result
+![screenshot end result](assets/images/password-generator-final.png)
+
+## Links
+
+Deployed Application can be found [here](https://thebadams.github.io/password-generations)
+
+Github Repository can be found [here](https://www.github.com/thebadams/password-generations.git)
