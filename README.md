@@ -54,3 +54,14 @@ The web application is expected to behave in the following ways
 Deployed Application can be found [here](https://thebadams.github.io/password-generations)
 
 Github Repository can be found [here](https://www.github.com/thebadams/password-generations.git)
+
+## Contact Information
+
+My Github Profile: [thebadams](https://www.github.com/thebadams)
+
+My LinkedIn Profile: [Brian P. Adams](https://www.linkedin.com/in/brian-adams-5a410b53/)
+
+My email address: [bpeteradams@gmail.com](mailto:bpeteradams@gmail.com)
+
+## License
+
