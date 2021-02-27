@@ -107,6 +107,34 @@ return character;
 
 }
 
+function testCharTypes(){
+  regexUpper = /[A-Z]/
+  regexLower = /[a-z]/
+  regexNumber = /[0-9]/
+  regexSpecial = /[@%$&!]/
+  if(regexUpper.test(passwordInfo.passwordValue)){
+    alert("The Password Includes Uppercase Letters");
+  } else {
+    alert("the Password Does Not Include Uppercase Letters");
+  }
+  if (regexLower.test(passwordInfo.passwordValue)) {
+    alert("The Password Includes Lowercase Letters");
+  } else {
+    alert("the Password Does Not Include Lowercase Letters");
+  }
+  if (regexNumber.test(passwordInfo.passwordValue)) {
+    alert("The Password Includes Numbers");
+  } else {
+    alert("the Password Does Not Include Numbers");
+  }
+  if (regexSpecial.test(passwordInfo.passwordValue)) {
+    alert("The Password Includes Special Characters");
+  } else {
+    alert("the Password Does Not Special Characters");
+  }
+  
+}
+
 //write a function to construct the password
 function constructPassword() {
   for(var i = 1; i <= passwordInfo.passwordLength; i++){
