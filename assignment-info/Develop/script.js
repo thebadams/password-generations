@@ -4,10 +4,12 @@
 var generateBtn = document.querySelector("#generate");
 
 var characterTypes = {
-  upperCase: ["A", "B", "C", "D", "E", "F"],
-  lowerCase: ["a", "b", "c", "d", "e", "f"],
+  upperCase: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+  lowerCase: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", 
+  "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
   numeric: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
-  special: ["@", "%", "$", "&", "!"]//insert array of special characters here.
+  special: ["!", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", 
+";", "<", ">", "=", ">", "?", "@", "[", "]", "^", "_", "`", "|", "~", " "]//insert array of special characters here.
 
 };
 
@@ -92,7 +94,6 @@ function addPossibleChars() {
 function userPrompt() {
   getLength();
   getCharacterTypes();
-  addPossibleChars();
 };
 
 
@@ -112,34 +113,39 @@ function testCharTypes(){
   regexLower = /[a-z]/
   regexNumber = /[0-9]/
   regexSpecial = /[@%$&!]/
-  if(regexUpper.test(passwordInfo.passwordValue)){
-    alert("The Password Includes Uppercase Letters");
-  } else {
-    alert("the Password Does Not Include Uppercase Letters");
-  }
-  if (regexLower.test(passwordInfo.passwordValue)) {
-    alert("The Password Includes Lowercase Letters");
-  } else {
-    alert("the Password Does Not Include Lowercase Letters");
-  }
-  if (regexNumber.test(passwordInfo.passwordValue)) {
-    alert("The Password Includes Numbers");
-  } else {
-    alert("the Password Does Not Include Numbers");
-  }
-  if (regexSpecial.test(passwordInfo.passwordValue)) {
-    alert("The Password Includes Special Characters");
-  } else {
-    alert("the Password Does Not Special Characters");
-  }
+  if(passwordInfo.includesUpperCase){
+    if(!(regexUpper.test(passwordInfo.passwordValue))){
+      constructPassword()
+    };
+  };
+  if (passwordInfo.includesLowerCase) {
+    if (!(regexLower.test(passwordInfo.passwordValue))) {
+      constructPassword();
+    };
+  };
+  if (passwordInfo.includesNumeric) {
+    if (!(regexNumber.test(passwordInfo.passwordValue))) {
+      constructPassword();
+    };
+  };
+  if (passwordInfo.includesSpecial) {
+    if (!(regexSpecial.test(passwordInfo.passwordValue))) {
+      constructPassword();
+    };
+  };
+};
   
-}
 
 //write a function to construct the password
 function constructPassword() {
+  passwordInfo.possibleCharacters = [];
+  passwordInfo.passwordCharacters = [];
+  passwordInfo.passwordValue = ""
+  addPossibleChars();
   for(var i = 1; i <= passwordInfo.passwordLength; i++){
    var character = getRandomChar();
     passwordInfo.passwordCharacters.push(character);
   }
   passwordInfo.passwordValue = passwordInfo.passwordCharacters.join("");
+  testCharTypes();
 }
